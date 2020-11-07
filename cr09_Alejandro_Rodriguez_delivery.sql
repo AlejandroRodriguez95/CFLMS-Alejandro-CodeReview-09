@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-11-2020 a las 03:21:45
+-- Tiempo de generación: 07-11-2020 a las 12:49:16
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.2
 
@@ -19,10 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `cr09_Alejandro_Rodriguez_delivery`
+-- Base de datos: `cr09_alejandro_rodriguez_delivery`
 --
-CREATE DATABASE IF NOT EXISTS `cr09_Alejandro_Rodriguez_delivery` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `cr09_Alejandro_Rodriguez_delivery`;
+CREATE DATABASE IF NOT EXISTS `cr09_alejandro_rodriguez_delivery` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `cr09_alejandro_rodriguez_delivery`;
 
 -- --------------------------------------------------------
 
@@ -279,7 +279,8 @@ ALTER TABLE `measures`
 --
 ALTER TABLE `office`
   ADD PRIMARY KEY (`office_id`),
-  ADD KEY `fk_office_address_id` (`fk_address_id`);
+  ADD KEY `fk_office_address_id` (`fk_address_id`),
+  ADD KEY `fk_goods_id` (`fk_goods_id`);
 
 --
 -- Indices de la tabla `office_goods`
@@ -390,6 +391,7 @@ ALTER TABLE `family_dependants`
 -- Filtros para la tabla `office`
 --
 ALTER TABLE `office`
+  ADD CONSTRAINT `fk_goods_id` FOREIGN KEY (`fk_goods_id`) REFERENCES `office_goods` (`goods_id`),
   ADD CONSTRAINT `fk_office_address_id` FOREIGN KEY (`fk_address_id`) REFERENCES `address` (`address_id`);
 
 --
