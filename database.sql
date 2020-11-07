@@ -19,10 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `code_review_9`
+-- Base de datos: `cr09_Alejandro_Rodriguez_delivery`
 --
-CREATE DATABASE IF NOT EXISTS `code_review_9` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `code_review_9`;
+CREATE DATABASE IF NOT EXISTS `cr09_Alejandro_Rodriguez_delivery` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `cr09_Alejandro_Rodriguez_delivery`;
 
 -- --------------------------------------------------------
 
