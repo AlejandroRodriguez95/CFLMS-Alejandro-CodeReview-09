@@ -1,0 +1,1 @@
+There's 2 versions of the fourth diagram. The extended contains 3 extra tables to reach the requirement for getting the 120 points, and it's the one used on the database.
